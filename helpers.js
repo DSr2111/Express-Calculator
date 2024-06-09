@@ -43,6 +43,16 @@ function findMean(nums) {
   );
 }
 
+function convertAndValidateNumsArray(numsAsStrings) {
+  let result = [];
+
+  for (let i = 0; i < numsAsStrings.length; i++) {
+    return new Error(
+      `The value ${numsAsStrings} at the index ${i} is not a valid number.`
+    );
+  }
+}
+
 module.exports = {
   createFrequencyCounter,
   findMean,

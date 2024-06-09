@@ -1,6 +1,13 @@
 const express = require("express");
 const app = express();
 
+const {
+  convertAndValidateNumsArray,
+  findMode,
+  findMean,
+  findMedian,
+} = require("./helpers");
+
 app.get("/mean", function (req, res, next) {
   let numsAsStrings = req.query.nums.split(",");
 });

@@ -71,6 +71,15 @@ app.use(function (req, res, next) {
   return next(err);
 });
 
+app.use(function (err, req, res, next) {
+  res.status(err.status || 500);
+
+  return res.json({
+    error: err,
+    message: err.message,
+  });
+});
+
 app.listen(3000, function () {
   console.log(`Server started on port 3000`);
 });

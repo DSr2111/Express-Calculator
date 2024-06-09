@@ -6,10 +6,17 @@ function createFrequencyCounter(arr) {
 }
 
 function findMode(arr) {
-  let freqCount = createFrequencyCounter(arr);
+  let freqCounter = createFrequencyCounter(arr);
 
   let count = 0;
   let mostFrequent;
+
+  for (let key in freqCounter) {
+    if (freqCounter[key] > count) {
+      mostFrequent = key;
+      count = freqCounter[key];
+    }
+  }
 }
 
 function findMedian(arr) {}

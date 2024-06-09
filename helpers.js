@@ -5,7 +5,12 @@ function createFrequencyCounter(arr) {
   }, {});
 }
 
-function findMode(arr) {}
+function findMode(arr) {
+  let freqCount = createFrequencyCounter(arr);
+
+  let count = 0;
+  let mostFrequent;
+}
 
 function findMedian(arr) {}
 

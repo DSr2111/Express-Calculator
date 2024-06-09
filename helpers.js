@@ -20,6 +20,15 @@ function findMode(arr) {
   return +mostFrequent;
 }
 
-function findMedian(arr) {}
+function findMedian(arr) {
+  nums.sort((a, b) => a - b);
+
+  let middleIdx = Math.floor(nums.length / 2);
+  let median;
+
+  if (nums.length % 2 === 0) {
+    median = (nums[middleIdx] + nums[middleIdx - 1]) / 2;
+  }
+}
 
 function findMean(arr) {}

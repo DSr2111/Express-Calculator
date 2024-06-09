@@ -65,6 +65,10 @@ app.get("/mode", function (req, res, next) {
   return res.send(result);
 });
 
+app.use(function (req, res, next) {
+  const err = new ExpressError("Not Found", 404);
+});
+
 app.listen(3000, function () {
   console.log(`Server started on port 3000`);
 });

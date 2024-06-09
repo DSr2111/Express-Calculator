@@ -64,4 +64,5 @@ module.exports = {
   findMean,
   findMedian,
   findMode,
+  convertAndValidateNumsArray,
 };

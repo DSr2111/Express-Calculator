@@ -42,3 +42,10 @@ function findMean(nums) {
     }) / nums.length
   );
 }
+
+module.exports = {
+  createFrequencyCounter,
+  findMean,
+  findMedian,
+  findMode,
+};

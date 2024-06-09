@@ -7,8 +7,16 @@ const {
   findMean,
   findMedian,
 } = require("./helpers");
+const ExpressError = require("./expressError");
 
 app.get("/mean", function (req, res, next) {
+  if (!req.query.nums) {
+    throw new ExpressError(
+      "You must pass a query key of nums with a comma-separated list of numbers.",
+      400
+    );
+  }
+
   let numsAsStrings = req.query.nums.split(",");
   let nums = convertAndValidateNumsArray(numsAsStrings);
 
@@ -21,6 +29,13 @@ app.get("/mean", function (req, res, next) {
 });
 
 app.get("/median", function (req, res, next) {
+  if (!req.query.nums) {
+    throw new ExpressError(
+      "You must pass a query key of nums with a comma-separated list of numbers.",
+      400
+    );
+  }
+
   let numsAsStrings = req.query.nums.split(",");
   let nums = convertAndValidateNumsArray(numsAsStrings);
 
@@ -33,6 +48,12 @@ app.get("/median", function (req, res, next) {
 });
 
 app.get("/mode", function (req, res, next) {
+  if (!req.query.nums) {
+    throw new ExpressError(
+      "You must pass a query key of nums with a comma-separated list of numbers.",
+      400
+    );
+  }
   let numsAsStrings = req.query.nums.split(",");
   let nums = convertAndValidateNumsArray(numsAsStrings);
 

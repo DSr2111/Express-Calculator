@@ -17,6 +17,7 @@ function findMode(arr) {
       count = freqCounter[key];
     }
   }
+  return +mostFrequent;
 }
 
 function findMedian(arr) {}

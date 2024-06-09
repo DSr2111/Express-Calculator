@@ -54,7 +54,9 @@ function convertAndValidateNumsArray(numsAsStrings) {
         `The value ${numsAsStrings} at the index ${i} is not a valid number.`
       );
     }
+    result.push(valToNumber);
   }
+  return result;
 }
 
 module.exports = {

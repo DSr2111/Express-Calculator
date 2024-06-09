@@ -5,6 +5,7 @@ describe("#findMedian", function () {
     expect(findMedian([1, -1, 4, 2])).toEqual(1.5);
   });
 });
+
 describe("#findMean", function () {
   it("finds the mean of an empty array", function () {
     expect(findMean([])).toEqual(0);

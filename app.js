@@ -67,6 +67,8 @@ app.get("/mode", function (req, res, next) {
 
 app.use(function (req, res, next) {
   const err = new ExpressError("Not Found", 404);
+
+  return next(err);
 });
 
 app.listen(3000, function () {
